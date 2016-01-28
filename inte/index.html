@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<style>
+		/* global */
+		body {
+			margin: 0;
+			font-family: Montserrat;
+			font-weight: 400;
+		}
+		#wrapper {
+			width: 100%;
+			height: 100vh;
+		}
+		div, nav {
+			outline: 1px blue solid;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		/* my stuff */
+		.left 		{ float: left  }
+		.right 		{ float: right }
+		.full 		{ width: 100%  }
+		.half 		{ width: 50%   }
+		.quarter 	{ width: 25%   }
+		.clear 		{ clear: both  }
+		/* logo */
+		.logo {
+			padding-left: 2%;
+			padding-right: 2%;
+			width: 46%;
+		}
+		.title {
+			font-size: 1.75em;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+		/* header */
+		nav {
+			text-align: right;
+			padding-left: 2%;
+			padding-right: 2%;
+			width: 46%;
+		}
+		nav > a {
+			font-size: 1.5em;
+		}
+		/* main content */
+		.list-item {
+			width: 100%;
+		}
+		.list-item,
+		.list-item > div,
+		.logo, nav {
+			height: 100px;
+		}
+		.list-item:nth-child(even) {
+			background: #ddd;
+		}
+		.list-item:nth-child(odd) {
+			background: #ccc;
+		}
+		.post-image {
+			width: 25%;
+		}
+		.post-text {
+			padding-left: 2%;
+			padding-right: 2%;
+			width: 71%;
+		}
+		.post-text > h1 {
+			line-height: 1.95em;
+			font-weight: 400;
+		}
+
+	</style>
+</head>
+<body class="body">
+
+	<div id="wrapper">
+
+		<div class="logo left">
+			<h1 class="title">Martin Lexelius Core</h1>
+		</div>
+		<nav class="right">
+			<a href="/html/">Web Dev</a> |
+			<a href="/css/">Type</a> |
+			<a href="/js/">Graf</a> |
+			<a href="/jquery/">Contact</a>
+		</nav>
+
+		<div class="clear"></div>
+
+		<div class="main-content">
+
+			<div class="list-item full">
+				<div class="post-image left">
+					<img src="asfasdf.png" alt="">
+				</div>
+				<div class="post-text left">
+					<h1>En text om bla bla i den asdf asdf på lorem ipsum</h1>
+				</div>
+			</div>
+
+			<div class="list-item full">
+				<div class="post-image left">
+					<img src="asfasdf.png" alt="">
+				</div>
+				<div class="post-text left">
+					<h1>En text om bla bla i den asdf asdf på lorem ipsum</h1>
+				</div>
+			</div>
+
+			<div class="list-item full">
+				<div class="post-image left">
+					<img src="asfasdf.png" alt="">
+				</div>
+				<div class="post-text left">
+					<h1>En text om bla bla i den asdf asdf på lorem ipsum</h1>
+				</div>
+			</div>
+
+			<div class="list-item full">
+				<div class="post-image left">
+					<img src="asfasdf.png" alt="">
+				</div>
+				<div class="post-text left">
+					<h1>En text om bla bla i den asdf asdf på lorem ipsum</h1>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>
+
+<footer>
+	
+</footer>
