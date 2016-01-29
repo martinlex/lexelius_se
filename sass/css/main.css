@@ -19,11 +19,18 @@
 .full {
   width: 100%; }
 
+.threequarter {
+  width: 75%; }
+
 .half {
   width: 50%; }
 
 .quarter {
   width: 25%; }
+
+.center {
+  display: block;
+  margin: 0 auto; }
 
 .clear {
   clear: both; }
@@ -47,6 +54,9 @@ body {
 h1 {
   font-size: 1.8em;
   font-weight: 700; }
+
+.fa {
+  cursor: pointer; }
 
 /* header */
 header {
@@ -76,6 +86,13 @@ header {
       font-size: 1.25em;
       line-height: 3.75em;
       text-decoration: none; }
+    header nav a,
+    header nav a:link,
+    header nav a:visited,
+    header nav a:active {
+      color: #444; }
+    header nav a:hover {
+      color: #111; }
 
 /* main content */
 .even {
@@ -99,6 +116,7 @@ header {
     padding-right: 2%;
     width: 71%; }
     .list-item .post-title h1 {
+      color: #333;
       line-height: 1.9em;
       font-weight: 400; }
   .list-item .ellipsified {
@@ -106,11 +124,37 @@ header {
     white-space: nowrap;
     text-overflow: ellipsis; }
 
-/*
-.list-item:nth-child(even) {
-	background: #ddd;
-}
-.list-item:nth-child(odd) {
-	background: #ccc;
-}
-*/
+/* contact */
+.contact {
+  background: #eee;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  padding: 2%;
+  position: fixed;
+  width: 96%; }
+  .contact .about {
+    margin-top: 5%; }
+    .contact .about .photo {
+      border-radius: 10%;
+      width: 80%; }
+    .contact .about h1 {
+      line-height: 0em;
+      margin-bottom: 1.25em; }
+    .contact .about p {
+      line-height: 150%; }
+      .contact .about p code {
+        background: #888;
+        border-radius: 4px;
+        color: #fff;
+        font-family: "Montserrat";
+        padding: 2px 4px; }
+  .contact .social-media-item {
+    margin-right: 1em; }
+    .contact .social-media-item a,
+    .contact .social-media-item a:link,
+    .contact .social-media-item a:visited,
+    .contact .social-media-item a:active {
+      color: #888; }
+    .contact .social-media-item a:hover {
+      color: #777; }

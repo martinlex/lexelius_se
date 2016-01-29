@@ -11,12 +11,14 @@
 }
 
 /* my stuff */
-.left 		{ float: left  }
-.right 		{ float: right }
-.full 		{ width: 100%  }
-.half 		{ width: 50%   }
-.quarter 	{ width: 25%   }
-.clear 		{ clear: both  }
+.left 			{ float: left  }
+.right 			{ float: right }
+.full 			{ width: 100%  }
+.threequarter 	{ width: 75%   }
+.half 			{ width: 50%   }
+.quarter 		{ width: 25%   }
+.center 			{ display: block; margin: 0 auto; }
+.clear 			{ clear: both  }
 
 /* some vars */
 $postHeight: 80px;
@@ -40,6 +42,9 @@ h1 {
 	font-size: 1.8em;
 	font-weight: 700;
 }
+.fa {
+	cursor: pointer;
+} 
 
 /* header */
 header {
@@ -72,6 +77,15 @@ header {
 			line-height: 3.75em;
 			text-decoration: none;
 		}
+		a,
+		a:link,
+		a:visited,
+		a:active {
+			color: #444;
+		}
+		a:hover {
+			color: #111;
+		}
 	}
 }
 
@@ -96,6 +110,7 @@ header {
 		padding-right: 2%;
 		width: 71%;
 		h1 {
+			color: #333;
 			line-height: 1.9em;
 			font-weight: 400;
 		}
@@ -106,11 +121,47 @@ header {
 		text-overflow: ellipsis;
 	}
 }
-/*
-.list-item:nth-child(even) {
-	background: #ddd;
+
+/* contact */
+.contact {
+	background: #eee;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	padding: 2%; 
+	position: fixed;
+	width: 96%;
+	.about {
+		margin-top: 5%;
+		.photo {
+			border-radius: 10%;
+			width: 80%;
+		}
+		h1 {
+			line-height: 0em;
+			margin-bottom: 1.25em;
+		}
+		p {
+			line-height: 150%;
+			code {
+				background: #888;
+				border-radius: 4px;
+				color: #fff;
+				font-family: "Montserrat";
+				padding: 2px 4px;
+			}
+		}
+	}
+	.social-media-item { 
+		margin-right: 1em;
+		a,
+		a:link,
+		a:visited,
+		a:active {
+			color: #888;
+		}
+		a:hover {
+			color: #777;
+		}
+	}
 }
-.list-item:nth-child(odd) {
-	background: #ccc;
-}
-*/

@@ -1,0 +1,13 @@
+		<header class="full">
+			<div class="logo left">
+				<h1 class="title">Martin Lexelius Core</h1>
+			</div>
+
+			<nav class="right">
+				<a class="category" href="#" ng-repeat="category in categories" ng-click="filters.category = category.id">{{category.name}} | </a>
+				<a class="category" href="#" ng-click="filters.category = ''">Allt | </a>
+				<a class="category" href="#" ng-click="showMe();" >Kontakt</a>
+			</nav>
+
+		</header>
+		<div class="clear"></div>
