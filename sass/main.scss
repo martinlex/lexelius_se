@@ -104,6 +104,7 @@ header {
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-size: cover; 
+		cursor: pointer;
 	}
 	.post-title {
 		padding-left: 2%;
@@ -111,6 +112,7 @@ header {
 		width: 71%;
 		h1 {
 			color: #333;
+			cursor: pointer;
 			line-height: 1.9em;
 			font-weight: 400;
 		}
@@ -154,14 +156,20 @@ header {
 	}
 	.social-media-item { 
 		margin-right: 1em;
+		.icon-svg {
+			opacity: 0.45;
+			transition: opacity 0.3s ease;
+			height: 60px;
+			width: 60px;
+		}
+		.icon-svg:hover {
+			opacity: 0.6;
+		}
 		a,
 		a:link,
 		a:visited,
 		a:active {
 			color: #888;
-		}
-		a:hover {
-			color: #777;
 		}
 	}
 }

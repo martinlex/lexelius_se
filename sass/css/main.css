@@ -110,13 +110,15 @@ header {
   .list-item .thumbnail {
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    cursor: pointer; }
   .list-item .post-title {
     padding-left: 2%;
     padding-right: 2%;
     width: 71%; }
     .list-item .post-title h1 {
       color: #333;
+      cursor: pointer;
       line-height: 1.9em;
       font-weight: 400; }
   .list-item .ellipsified {
@@ -151,10 +153,15 @@ header {
         padding: 2px 4px; }
   .contact .social-media-item {
     margin-right: 1em; }
+    .contact .social-media-item .icon-svg {
+      opacity: 0.45;
+      transition: opacity 0.3s ease;
+      height: 60px;
+      width: 60px; }
+    .contact .social-media-item .icon-svg:hover {
+      opacity: 0.6; }
     .contact .social-media-item a,
     .contact .social-media-item a:link,
     .contact .social-media-item a:visited,
     .contact .social-media-item a:active {
       color: #888; }
-    .contact .social-media-item a:hover {
-      color: #777; }
