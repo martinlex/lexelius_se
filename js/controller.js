@@ -1,4 +1,4 @@
-app.controller('mainCtrl', function($scope, $http) {
+app.controller('mainCtrl', function($scope, $http, $window) {
 
 	// Load posts from mySQL and JSON
 	$http.get('./include/query_posts.php').then(function (response) {
@@ -25,7 +25,9 @@ app.controller('mainCtrl', function($scope, $http) {
 			return results.id === id;
 		}
 		// Show the post
-		$scope.thePost = true; 	// Show the post
+		$scope.thePost = true;
+		// Scroll to the top
+		$window.scrollTo(0,0)
 	}
 
 	// Close single post
