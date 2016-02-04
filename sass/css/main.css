@@ -1,14 +1,3 @@
-/* fonts */
-@font-face {
-  font-family: "Akkurat Regular";
-  src: url(fonts/akkurat-regular.woff) format(woff);
-  src: url(fonts/akkurat-regular.ttf) format(truetype); }
-
-@font-face {
-  font-family: "Akkurat Bold";
-  src: url(fonts/akkurat-bold.woff) format(woff);
-  src: url(fonts/akkurat-bold.ttf) format(truetype); }
-
 /* my stuff */
 .left {
   float: left; }
@@ -88,7 +77,7 @@ header {
     width: 56%; }
     header nav a.category {
       font-size: 1.25em;
-      line-height: 3.75em;
+      line-height: 3.9em;
       text-decoration: none; }
     header nav a,
     header nav a:link,
@@ -115,6 +104,8 @@ header {
     top: 12px;
     right: 12px;
     z-index: 99; }
+  .singlePost .postContent svg:hover {
+    cursor: pointer; }
   .singlePost .postContent img {
     width: 100%; }
   .singlePost .postContent p {
@@ -138,8 +129,14 @@ header {
   .list-item .thumbnail {
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer; }
+    background-size: 100%;
+    cursor: pointer;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease; }
+  .list-item .thumbnail:hover {
+    background-size: 105%; }
   .list-item .post-title {
     padding-left: 2%;
     padding-right: 2%;
@@ -187,3 +184,243 @@ header {
     .contact .social-media-item a:visited,
     .contact .social-media-item a:active {
       color: #888; }
+
+/* *************************** */
+/* ***    Media queries    *** */
+/* *************************** */
+/* ************************************************ */
+/* ************************************************ */
+@media (min-width: 320px) and (max-width: 374px) {
+  #wrapper {
+    margin-top: 130px; }
+  header {
+    background-color: #60BDFF;
+    opacity: 1; }
+    header .logo {
+      width: 92%; }
+      header .logo .title {
+        font-size: 1.3em;
+        line-height: 2.5em;
+        text-align: center; }
+    header nav {
+      background: #333;
+      color: #fff;
+      height: 50px;
+      width: 100%; }
+      header nav a {
+        display: none; }
+      header nav a,
+      header nav a:link,
+      header nav a:visited,
+      header nav a:active {
+        color: #ddd;
+        line-height: 2.5em; }
+      header nav .card {
+        clear: both;
+        display: block;
+        text-align: center;
+        width: 100%; }
+  .singlePost .postContent {
+    padding: 8%;
+    top: 0;
+    left: 0;
+    height: 300vh;
+    width: 84%; }
+    .singlePost .postContent svg {
+      height: 40px;
+      width: 40px;
+      top: 14px;
+      right: 14px; }
+    .singlePost .postContent h1 {
+      margin-top: 1.25em; }
+    .singlePost .postContent .tags {
+      line-height: 1.75em;
+      margin-top: 0; }
+  .list-item .thumbnail {
+    display: none; }
+  .list-item .post-title {
+    width: 100%; }
+    .list-item .post-title h1 {
+      margin-left: 20px; }
+  .contact {
+    height: 300vh;
+    padding: 8%;
+    position: absolute;
+    width: 84%; }
+    .contact .threequarter {
+      width: 100%; }
+    .contact .contact-close {
+      height: 40px;
+      width: 40px; }
+    .contact .about {
+      margin: 0; }
+      .contact .about .quarter {
+        display: none; }
+      .contact .about .about-text {
+        font-size: 95%;
+        width: 100%; }
+        .contact .about .about-text code {
+          background-color: inherit;
+          color: inherit;
+          padding: inherit; }
+    .contact .social-media-item {
+      margin-right: .5em; }
+      .contact .social-media-item .icon-svg {
+        height: 50px;
+        width: 50px;
+        margin-top: -1.5em; } }
+
+/* ************************************************ */
+/* ************************************************ */
+@media (min-width: 375px) and (max-width: 679px) {
+  #wrapper {
+    margin-top: 130px; }
+  header {
+    background-color: #60BDFF;
+    opacity: 1; }
+    header .logo {
+      width: 92%; }
+      header .logo .title {
+        font-size: 1.5em;
+        line-height: 2.1em;
+        text-align: center; }
+    header nav {
+      background: #333;
+      color: #fff;
+      height: 50px;
+      width: 100%; }
+      header nav a {
+        display: none; }
+      header nav a,
+      header nav a:link,
+      header nav a:visited,
+      header nav a:active {
+        color: #ddd;
+        line-height: 2.5em; }
+      header nav .card {
+        clear: both;
+        display: block;
+        text-align: center;
+        width: 100%; }
+  .singlePost .postContent {
+    padding: 8%;
+    top: 0;
+    left: 0;
+    height: 260vh;
+    width: 84%; }
+    .singlePost .postContent svg {
+      height: 40px;
+      width: 40px;
+      top: 14px;
+      right: 14px; }
+    .singlePost .postContent h1 {
+      margin-top: 1.25em; }
+    .singlePost .postContent .tags {
+      line-height: 1.75em;
+      margin-top: 0; }
+  .list-item .thumbnail {
+    display: none; }
+  .list-item .post-title {
+    width: 100%; }
+    .list-item .post-title h1 {
+      margin-left: 20px; }
+  .contact {
+    height: 260vh;
+    padding: 8%;
+    position: absolute;
+    width: 84%; }
+    .contact .threequarter {
+      width: 100%; }
+    .contact .contact-close {
+      height: 40px;
+      width: 40px; }
+    .contact .about {
+      margin: 0; }
+      .contact .about .quarter {
+        display: none; }
+      .contact .about .about-text {
+        font-size: 95%;
+        width: 100%; }
+        .contact .about .about-text code {
+          background-color: inherit;
+          color: inherit;
+          padding: inherit; }
+    .contact .social-media-item {
+      margin-right: .5em; }
+      .contact .social-media-item .icon-svg {
+        height: 50px;
+        width: 50px;
+        margin-top: -1.5em; } }
+
+/* ************************************************ */
+/* ************************************************ */
+@media (min-width: 680px) and (max-width: 969px) {
+  #wrapper {
+    margin-top: 130px; }
+  header {
+    opacity: 1; }
+    header .logo {
+      width: 92%; }
+      header .logo .title {
+        font-size: 1.75em;
+        line-height: 1.6em;
+        margin-left: .75em; }
+    header nav {
+      background: #333;
+      color: #fff;
+      height: 50px;
+      width: 100%; }
+      header nav a,
+      header nav a:link,
+      header nav a:visited,
+      header nav a:active {
+        color: #ddd;
+        line-height: 2.5em; }
+      header nav .category {
+        letter-spacing: 0.02em; }
+      header nav .card {
+        margin-right: .5em; }
+  .singlePost .postContent {
+    padding: 8%;
+    top: 0;
+    left: 0;
+    height: 300vh;
+    width: 84%; }
+    .singlePost .postContent svg {
+      height: 40px;
+      width: 40px;
+      top: 14px;
+      right: 14px; }
+    .singlePost .postContent .tags {
+      margin-top: 0; }
+  .contact {
+    height: 200vh;
+    padding: 8%;
+    position: absolute;
+    width: 84%; }
+    .contact .threequarter {
+      width: 100%; }
+    .contact .contact-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      height: 40px;
+      width: 40px; }
+    .contact .about {
+      margin: 0; }
+      .contact .about .quarter {
+        display: none; }
+      .contact .about .about-text {
+        width: 100%; }
+    .contact .social-media-item {
+      margin-right: .5em; }
+      .contact .social-media-item .icon-svg {
+        margin-top: -1.5em; } }
+
+/* ************************************************ */
+/* ************************************************ */
+@media (min-width: 970px) and (max-width: 1280px) {
+  header .logo {
+    width: 40%; }
+  header nav {
+    width: 50%; } }

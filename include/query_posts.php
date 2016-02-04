@@ -2,7 +2,14 @@
 header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json; charset=utf-8');
 
-// db setup
+
+// live db setup
+$hostname = "lexelius.se.mysql"; 
+$username = "lexelius_se";
+$password = "hejsan";
+$db       = "lexelius_se";
+
+// local db setup
 $hostname = "localhost"; 
 $username = "root";
 $password = "";

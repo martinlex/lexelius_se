@@ -1,14 +1,3 @@
-/* fonts */
-@font-face {
-	font-family: "Akkurat Regular";
-	src: url(fonts/akkurat-regular.woff) format(woff);
-	src: url(fonts/akkurat-regular.ttf) format(truetype);
-}
-@font-face {
-	font-family: "Akkurat Bold";
-	src: url(fonts/akkurat-bold.woff) format(woff);
-	src: url(fonts/akkurat-bold.ttf) format(truetype);
-}
 
 /* my stuff */
 .left 			{ float: left  }
@@ -78,7 +67,7 @@ header {
 		width: 56%; 
 		a.category {
 			font-size: 1.25em;
-			line-height: 3.75em;
+			line-height: 3.9em;
 			text-decoration: none;
 		}
 		a,
@@ -112,15 +101,10 @@ header {
 			 right: 12px;
 			z-index: 99;
 		}
-		img {
-			width: 100%;
-		}
-		p {
-			line-height: 140%;
-		}
-		.tags {
-			margin-top: 1.75em;
-		}
+		svg:hover { cursor: pointer }
+		img { width: 100% }
+		p { line-height: 140% }
+		.tags { margin-top: 1.75em }
 	}
 }
 
@@ -130,18 +114,19 @@ header {
 .odd  { background: #ccc; }
 .list-item {
 	height: $postHeight;
-	div {
-		height: $postHeight;
-	}
-	.post-image {
-		width: 25%;
-	}
+	div { height: $postHeight }
+	.post-image { width: 25% }
 	.thumbnail {
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
-		background-size: cover; 
+		background-size: 100%; 
 		cursor: pointer;
+		transition: all .5s ease;
+		-webkit-transition: all .5s ease;
+		-o-transition: all .5s ease;
+		-moz-transition: all .5s ease;
 	}
+	.thumbnail:hover { background-size: 105% }
 	.post-title {
 		padding-left: 2%;
 		padding-right: 2%;
@@ -179,9 +164,7 @@ header {
 			line-height: 0em;
 			margin-bottom: 1.25em;
 		}
-		p {
-			line-height: 150%;
-		}
+		p { line-height: 150% }
 	}
 	.social-media-item { 
 		margin-right: 1em;
@@ -191,9 +174,7 @@ header {
 			height: 60px;
 			width: 60px;
 		}
-		.icon-svg:hover {
-			opacity: 0.6;
-		}
+		.icon-svg:hover { opacity: 0.6 }
 		a,
 		a:link,
 		a:visited,
@@ -201,4 +182,325 @@ header {
 			color: #888;
 		}
 	}
+}
+
+
+
+/* *************************** */
+/* ***    Media queries    *** */
+/* *************************** */
+
+$smallest: "(min-width: 320px) and (max-width: 374px)";
+$small: "(min-width: 375px) and (max-width: 679px)";
+$medium: "(min-width: 680px) and (max-width: 969px)";
+$large: "(min-width: 970px) and (max-width: 1280px)";
+
+
+/* ************************************************ */
+/* ************************************************ */
+
+@media #{$smallest} {
+
+	#wrapper { margin-top: $postHeight + 50px }
+
+	header {
+		background-color: #60BDFF;
+		opacity: 1;
+		.logo { 
+			width: 92%;
+			.title { 
+				font-size: 1.3em;
+				line-height: 2.5em;
+				text-align: center; 
+			}
+		}
+		nav { 
+			background: #333;
+			color: #fff;
+			height: 50px;
+			width: 100%;
+			a { display: none }
+			a,
+			a:link,
+			a:visited,
+			a:active {
+				color: #ddd;
+				line-height: 2.5em;
+			}
+			.card { 
+				clear: both;
+				display: block;
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+
+	.singlePost {
+		.postContent{
+			padding: 8%; 
+			top: 0;
+			left: 0;
+			height: 300vh;
+			width: 84%;
+			svg {
+				height: 40px;
+				width: 40px;
+				top: 14px;
+				right: 14px;
+			}
+			h1 { margin-top: 1.25em }
+			.tags { 
+				line-height: 1.75em;
+				margin-top: 0;
+			}
+		}
+	}
+
+	.list-item {
+		.thumbnail { display: none }
+		.post-title { 
+			width: 100%; 
+			h1 { 
+				margin-left: 20px;
+			}
+		}
+	}
+
+	.contact {
+		height: 300vh;
+		padding: 8%;
+		position: absolute;
+		width: 84%;
+		.threequarter {
+			width: 100%;
+		}
+		.contact-close {
+			height: 40px;
+			width: 40px;
+		}
+		.about {
+			margin: 0;
+			.quarter { display: none }
+			.about-text {
+				font-size: 95%;
+				width: 100%;
+				code {
+					background-color: inherit;
+					color: inherit;
+					padding: inherit;
+				}
+			}
+		}
+		.social-media-item { 
+			margin-right: .5em;
+			.icon-svg {
+				height: 50px;
+				width: 50px;
+				margin-top: -1.5em;
+			}
+		}
+	}
+
+}
+
+
+/* ************************************************ */
+/* ************************************************ */
+
+@media #{$small} {
+
+	#wrapper { margin-top: $postHeight + 50px }
+
+	header {
+		background-color: #60BDFF;
+		opacity: 1;
+		.logo { 
+			width: 92%;
+			.title { 
+				font-size: 1.5em;
+				line-height: 2.1em;
+				text-align: center; 
+			}
+		}
+		nav { 
+			background: #333;
+			color: #fff;
+			height: 50px;
+			width: 100%;
+			a { display: none }
+			a,
+			a:link,
+			a:visited,
+			a:active {
+				color: #ddd;
+				line-height: 2.5em;
+			}
+			.card { 
+				clear: both;
+				display: block;
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+
+	.singlePost {
+		.postContent{
+			padding: 8%; 
+			top: 0;
+			left: 0;
+			height: 260vh;
+			width: 84%;
+			svg {
+				height: 40px;
+				width: 40px;
+				top: 14px;
+				right: 14px;
+			}
+			h1 { margin-top: 1.25em }
+			.tags { 
+				line-height: 1.75em;
+				margin-top: 0;
+			}
+		}
+	}
+
+	.list-item {
+		.thumbnail { display: none }
+		.post-title { 
+			width: 100%; 
+			h1 { 
+				margin-left: 20px;
+			}
+		}
+	}
+
+	.contact {
+		height: 260vh;
+		padding: 8%;
+		position: absolute;
+		width: 84%;
+		.threequarter {
+			width: 100%;
+		}
+		.contact-close {
+			height: 40px;
+			width: 40px;
+		}
+		.about {
+			margin: 0;
+			.quarter { display: none }
+			.about-text {
+				font-size: 95%;
+				width: 100%;
+				code {
+					background-color: inherit;
+					color: inherit;
+					padding: inherit;
+				}
+			}
+		}
+		.social-media-item { 
+			margin-right: .5em;
+			.icon-svg {
+				height: 50px;
+				width: 50px;
+				margin-top: -1.5em;
+			}
+		}
+	}
+
+}
+
+
+/* ************************************************ */
+/* ************************************************ */
+
+@media #{$medium} {
+
+	#wrapper { margin-top: $postHeight + 50px }
+
+	header {
+		// background-color: #60BDFF;
+		opacity: 1;
+		.logo { 
+			width: 92%;
+			.title { 
+				font-size: 1.75em;
+				line-height: 1.6em;
+				margin-left: .75em;
+			}
+		}
+		nav { 
+			background: #333;
+			color: #fff;
+			height: 50px;
+			width: 100%;
+			a,
+			a:link,
+			a:visited,
+			a:active {
+				color: #ddd;
+				line-height: 2.5em;
+			}
+			.category { letter-spacing: 0.02em }
+			.card { margin-right: .5em }
+		}
+	}
+
+	.singlePost {
+		.postContent{
+			padding: 8%; 
+			top: 0;
+			left: 0;
+			height: 300vh;
+			width: 84%;
+			svg {
+				height: 40px;
+				width: 40px;
+				top: 14px;
+				right: 14px;
+			}
+			.tags { margin-top: 0 }
+		}
+	}
+
+	.contact {
+		height: 200vh;
+		padding: 8%;
+		position: absolute;
+		width: 84%;
+		.threequarter { width: 100% }
+		.contact-close {
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			height: 40px;
+			width: 40px;
+		}
+		.about {
+			margin: 0;
+			.quarter { display: none }
+			.about-text { width: 100% }
+		}
+		.social-media-item { 
+			margin-right: .5em;
+			.icon-svg { margin-top: -1.5em }
+		}
+	}
+
+}
+
+
+/* ************************************************ */
+/* ************************************************ */
+
+@media #{$large} {
+
+	header {
+		.logo { width: 40% }
+		nav { width: 50% }
+	}
+
 }
