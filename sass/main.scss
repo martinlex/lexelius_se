@@ -136,12 +136,10 @@ header {
 			cursor: pointer;
 			line-height: 1.9em;
 			font-weight: 400;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
 		}
-	}
-	.ellipsified {
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
 	}
 }
 

@@ -145,11 +145,10 @@ header {
       color: #333;
       cursor: pointer;
       line-height: 1.9em;
-      font-weight: 400; }
-  .list-item .ellipsified {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; }
+      font-weight: 400;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden; }
 
 /* contact */
 .contact {
